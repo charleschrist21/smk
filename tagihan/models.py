@@ -14,7 +14,7 @@ class tagihan(models.Model):
     lain5 = models.CharField("Lain-lain",null=True,blank=True,max_length=255)
     lain6 = models.CharField("Lain-lain",null=True,blank=True,max_length=255)
     lain7 = models.CharField("Lain-lain",null=True,blank=True,max_length=255)
-    namaSiswa = models.CharField(siswa,max_length=255)
+    namaSiswa = models.ForeignKey(siswa,on_delete=models.CASCADE)
     
     def __str__(self):
         return self.spp
