@@ -22,10 +22,7 @@ from absen.api import views as absen_views
 urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'^sekolah/siswa/',include('siswa.urls')),
-    url(r'^sekolah/siswa/absen/tanggal/$', absen_views.tanggalAbsenCreate.as_view(), name='absensiswacreate'),
-    url(r'^sekolah/siswa/absen/tanggal/detail/(?P<pk>[0-9+])/$', absen_views.tanggalAbsenDetailAndEdit.as_view(), name='siswatanggalabsen'),
-    url(r'^sekolah/siswa/absen/bulan/$', absen_views.bulanAbsenCreate.as_view(), name='absenbulancreate'),
-    url(r'^sekolah/siswa/absen/bulan/detail/(?P<pk>[0-9+])/$', absen_views.bulanAbsenCreateDetailAndEdit.as_view(), name='siswabulanabsen'),
+    url(r'^sekolah/siswa/', include('absen.urls'))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
