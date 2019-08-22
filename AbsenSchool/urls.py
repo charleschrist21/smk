@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^sekolah/siswa/',include('siswa.urls')),
     url(r'^sekolah/siswa/', include('absen.urls')),
     url(r'^sekolah/siswa/', include('tagihan.urls')),
+    url(r'^sekolah/guru/', include('guru.urls')),
     url(r'^api/', include('user.urls'))
 ]
 if settings.DEBUG:
