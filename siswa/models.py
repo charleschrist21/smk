@@ -40,7 +40,7 @@ class siswa(models.Model):
     alamat = models.TextField(max_length=500)
     jurusan = models.CharField("Jurusan",max_length=255,choices=jurusan)
     tempat_lahir = models.CharField(max_length=255)
-    tanggal_lahir = models.CharField(max_length=255)
+    tanggal_lahir = models.CharField(max_length=255, null=False)
     Agama = models.CharField(max_length=255,choices=agama)
     jenis_kelamin = models.CharField(max_length=255,choices=jenisKelamin)
     kelas = models.CharField(max_length=255, choices=kelas)
